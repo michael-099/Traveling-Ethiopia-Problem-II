@@ -2,7 +2,7 @@
 Questions 
 1. Consider Figure 1 (A generic state space graph for traveling Ethiopia search problem) to solve  the following problems. 
 
-1.1 Convert Figure 1, a State space graph for traveling Ethiopia search problem, into some  sort of manageable data structure such as, stack or queue.  
+1.1 Convert Figure 1, a State space graph for traveling Ethiopia search problem, into some  sort of manageable data structure.  
 
 1.2 Write a class that takes the converted state space graph, initial state, goal state and a  search strategy and return the corresponding solution/path according to the given strategy.  Please consider only breadth-first search and depth-first search strategies for this question. 
 
@@ -12,7 +12,7 @@ Questions
 
 2. Given Figure 2, a state space graph with backward cost for the traveling Ethiopia search  problem. 
 
-2.1 Convert Figure 2 into some sort of manageable data structure such as, stack or queue.
+2.1 Convert Figure 2 into some sort of manageable data structure .
 
 2.2 Assuming “Addis Ababa” as an initial state, write a program that use uniform cost search to generate a path to “Lalibela”. 
 

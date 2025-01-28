@@ -9,19 +9,39 @@ class BFS:
         
         while queue:
             curr=queue.popleft()
-
+        
             for neighbor in graph[curr]:
                 if neighbor not in visited:
                     visited.append(neighbor)
                     queue.append(neighbor)
             path.append(curr)
+        
             if curr==end:
                 break 
             
 
         return " " . join(path)
 
+    def breadthFirstSearchShortestPath(self,graph, start, end):
+        
+        queue = deque([[start]])
+        visited = []
+        visited.append(start)
+    
+        while queue:
+            path = queue.popleft()
+            node = path[-1]
 
+            if node == end:
+                return path
+    
+            
+            for neighbor in graph[node]:
+                if neighbor not in visited:
+                    visited.append(neighbor)
+                    queue.append(path + [neighbor])
+    
+        return []
 
 def main():
     graph = {
@@ -46,8 +66,7 @@ def main():
     'S': []
     }
     bfs=BFS()
-    return bfs.breadthFirstSearch(graph,"A", "Q")
-
+    return bfs.breadthFirstSearchShortestPath(graph, "A", "Q")
 if __name__ == "__main__":
     print(main())
 
