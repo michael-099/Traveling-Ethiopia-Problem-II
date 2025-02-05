@@ -50,10 +50,8 @@ class AdversarialSearch:
 
         return best_move, best_value
 
-# Example usage
-graph = AdversarialSearch()
 
-# Adding edges based on the map
+graph = AdversarialSearch()
 graph.add_edge("Addis Ababa", "Ambo")
 graph.add_edge("Addis Ababa", "Adama") 
 graph.add_edge("Addis Ababa", "Buta Jira")
@@ -76,7 +74,7 @@ graph.add_edge("Wolkite", "Tepi")
 graph.add_edge("Mojo", "Kaffa")
 graph.add_edge("Mojo", "Dilla")
 
-# Setting utility values for terminal nodes
+graph.set_utility("Hossana", 6)
 graph.set_utility("Shambu", 4)  
 graph.set_utility("Fincha", 5)  
 graph.set_utility("Gimbi", 8)   
@@ -88,9 +86,9 @@ graph.set_utility("Bench Naji", 5)
 graph.set_utility("Kaffa", 7)
 graph.set_utility("Tepi", 6) 
 graph.set_utility("Durame", 5)
-graph.set_utility("Hossana", 6)
 
-# Running Minimax
+
+
 start_node = "Addis Ababa"
 best_move, best_value = graph.best_path(start_node)
 print(f"Best path from {start_node} is {best_move} with utility value {best_value}")
